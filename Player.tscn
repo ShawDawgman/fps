@@ -10,8 +10,6 @@ mid_height = 2.0
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
-speed = 40
-acceleration = 10
 
 [node name="Head" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7124, 0 )

@@ -4,13 +4,18 @@
 
 [node name="Spatial" type="Spatial"]
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.68352, 0 )
+
 [node name="CSGBox" type="CSGBox" parent="."]
 use_collision = true
 width = 29.8747
 height = 0.280588
 depth = 42.3765
 
-[node name="Player" parent="CSGBox" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.68352, 0 )
-speed = 30
-acceleration = 10
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.248938, 0.968519, 0, -0.968519, 0.248938, 0, 5.77635, 14.6181 )
+use_collision = true
+width = 29.8747
+height = 0.280588
+depth = 42.3765
