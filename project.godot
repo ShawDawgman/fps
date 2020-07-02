@@ -19,6 +19,13 @@ config/name="Doom Clone"
 run/main_scene="res://Spatial.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=640
+window/size/height=480
+window/size/fullscreen=true
+window/stretch/mode="viewport"
+
 [input]
 
 Forward={

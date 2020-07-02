@@ -16,10 +16,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7124, 0 )
 
 [node name="Camera" type="Camera" parent="Head"]
 
-[node name="RayCast" type="RayCast" parent="Head/Camera"]
-enabled = true
-cast_to = Vector3( 0, -1, -50 )
-
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 1 )
