@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://grass.png" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -13,6 +23,7 @@ use_collision = true
 width = 29.8747
 height = 0.280588
 depth = 42.3765
+material = SubResource( 1 )
 
 [node name="CSGBox3" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.7075 )
@@ -20,26 +31,28 @@ use_collision = true
 width = 29.8747
 height = 0.280588
 depth = 42.3765
+material = SubResource( 2 )
 
 [node name="CSGBox4" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -69.6901 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71168, 4.24599, -74.5573 )
 use_collision = true
 width = 29.8747
 height = 0.280588
-depth = 42.3765
+depth = 25.3332
 
 [node name="CSGBox2" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.248938, 0.968519, 0, -0.968519, 0.248938, 0, 5.77635, 14.6181 )
+transform = Transform( 1, 0, 0, 0, 0.248938, 0.968519, 0, -0.968519, 0.248938, -1.14808, 5.61399, 15.3464 )
 use_collision = true
 width = 29.8747
 height = 0.280588
 depth = 42.3765
+material = SubResource( 3 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8812, 2.34216, 1.41198 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23554, 4.01387, -9.30643 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.645813, 15.4001, -5.53307 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.09012, 4.04119, -5.39501 )
@@ -52,3 +65,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87298, 1.82116, -2.59169 )
 
 [node name="Enemy6" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85183, 2.01806, 2.83692 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.845737, -0.5336, 0, -0.438987, -0.69578, 0.56849, -0.303346, -0.480793, -0.82269, 0, 19.3946, 0 )
