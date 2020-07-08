@@ -5,3 +5,8 @@
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+ambient_light_energy = 0.5
+fog_color = Color( 0.698039, 0.623529, 0.623529, 1 )
+fog_sun_color = Color( 1, 0.701961, 0.701961, 1 )
+fog_depth_begin = 0.0
+glow_enabled = true

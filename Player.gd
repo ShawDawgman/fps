@@ -2,7 +2,6 @@ extends KinematicBody
 
 const GRAVITY = -24.8
 var vel = Vector3()
-export var health = 5
 const MAX_SPEED = 45
 const ACCEL = 3
 
@@ -11,20 +10,13 @@ var dir = Vector3()
 const DEACCEL= 16
 const MAX_SLOPE_ANGLE = 40
 
-onready var weapon = $Head/Camera/ui/weapon
-onready var healthBar = $Head/Camera/ui/health
-
 onready var head = $Head
 onready var camera = $Head/Camera
 var camera_x_rotation = 0
 export var mouse_sensitivity = 0.3
 
 
-func _update_ui():
-	healthBar.text = "Health: " + String(health)	
-
 func _ready():
-	healthBar.text = "Health: " + String(health)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
